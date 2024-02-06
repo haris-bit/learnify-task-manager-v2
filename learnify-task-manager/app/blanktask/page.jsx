@@ -6,16 +6,16 @@ import { FaPlus } from "react-icons/fa";
 import { IoArrowBack } from "react-icons/io5";
 import Link from "next/link";
 
-const BlankProject = () => {
+const BlankTask = () => {
   return (
     <div className="flex w-full h-full">
       <div className="flex flex-col gap-6 w-full h-full p-12 ml-32 mt-12 ">
-        <h2 className="text-3xl font-bold">Blank Project</h2>
+        <h2 className="text-3xl font-bold">Create Blank Task</h2>
         <div className="flex gap-4 items-center">
           <h4 className="w-1/6 text-gray-700 ">Title</h4>
           <input
             type="text"
-            className="border border-gray-200 
+            className="border border-gray-400 
                          rounded-lg p-2 shadow-lg
                         hover:outline-none focus:outline-none
                         w-1/2
@@ -27,7 +27,11 @@ const BlankProject = () => {
           <h4 className="w-1/6 text-gray-700 ">Assignee</h4>
 
           <FaUserCircle className="text-2xl" />
-          <select className="">
+          <select
+            className="border border-gray-400 rounded-lg p-3 shadow-lg focus:outline-none
+          bg-white
+          "
+          >
             <option>Select</option>
             <option>Zak Nawaz</option>
             <option>Jack</option>
@@ -46,7 +50,7 @@ const BlankProject = () => {
           <textarea
             rows="10"
             cols="58"
-            className=" border border-gray-300 mt-4
+            className=" border border-gray-400 mt-4
                         rounded-lg p-2 shadow-lg focus:outline-none "
           />
         </div>
@@ -56,7 +60,7 @@ const BlankProject = () => {
           <h4 className="w-1/6 text-gray-700 ">Projected Hours</h4>
           <input
             type="number"
-            className="  border border-gray-300
+            className="  border border-gray-400
                         focus:outline-none rounded-lg p-2 shadow-lg
                         "
           />
@@ -67,7 +71,7 @@ const BlankProject = () => {
           <h4 className="w-1/6 text-gray-700 ">Actual Hours</h4>
           <input
             type="number"
-            className=" border border-gray-300
+            className=" border border-gray-400
                         focus:outline-none rounded-lg p-2 shadow-lg
                         "
           />
@@ -78,7 +82,7 @@ const BlankProject = () => {
           <h4 className="w-1/6 text-gray-700 ">Sub Tasks</h4>
           <input
             type="text"
-            className=" border border-gray-300
+            className=" border border-gray-400
                         focus:outline-none rounded-lg p-2 shadow-lg
                         "
           />
@@ -89,7 +93,10 @@ const BlankProject = () => {
         <div className="flex gap-4 items-center">
           <h4 className="w-1/6 text-gray-700 ">Collaborators</h4>
           <FaUserCircle className="text-2xl" />
-          <select className="">
+          <select
+            className="border border-gray-400 rounded-lg p-3 shadow-lg focus:outline-none
+          bg-white"
+          >
             <option>Select</option>
             <option>Zak Nawaz</option>
             <option>Jack</option>
@@ -105,7 +112,7 @@ const BlankProject = () => {
           <textarea
             rows="4"
             cols="64"
-            className=" border border-gray-300 mt-4
+            className=" border border-gray-400 mt-4
                         focus:outline-none rounded-lg p-2 shadow-lg
                         "
           />
@@ -132,4 +139,4 @@ const BlankProject = () => {
   );
 };
 
-export default BlankProject;
+export default BlankTask;

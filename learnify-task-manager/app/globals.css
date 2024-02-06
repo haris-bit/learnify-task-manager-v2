@@ -7,3 +7,24 @@ body{
     background-color: white;
     color: black;
 }
+
+/* Add these styles to your CSS or component styles */
+.pagination-previous,
+.pagination-next {
+    /* background-color: #4caf50; */
+    /* Change the background color as needed */
+    color: #fff;
+    /* Change the text color as needed */
+    padding: 10px 15px;
+    /* Adjust padding as needed */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pagination-disabled {
+    color: red;
+    border: none;
+    border-radius: 5px;
+    cursor: not-allowed;
+}

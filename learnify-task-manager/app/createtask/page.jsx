@@ -30,12 +30,12 @@ const CreateProject = () => {
 
         <div className="flex mt-12 gap-20">
           <div className="flex flex-col items-center justify-center ">
-            <Link href="/blankproject">
+            <Link href="/blanktask">
               <div className="border-2 border-gray-300 rounded-lg p-4 shadow-lg cursor-pointer ">
                 <FaPlus className="text-2xl" />
               </div>
             </Link>
-            <h3 className="mt-2">Blank Project</h3>
+            <h3 className="mt-2">Blank Task</h3>
           </div>
           <div className="flex flex-col items-center justify-center ">
             <Link href="/selecttemplate">
@@ -44,20 +44,6 @@ const CreateProject = () => {
               </div>
             </Link>
             <h3 className="mt-2">Use a template</h3>
-          </div>
-          <div className="flex flex-col items-center justify-center ">
-            <div
-              {...getRootProps()}
-              className="border-2 border-gray-300 rounded-lg p-4 shadow-lg cursor-pointer"
-            >
-              <input {...getInputProps()} />
-              {isDragActive ? (
-                <p>Drop the file here</p>
-              ) : (
-                <FaUpload className="text-2xl" />
-              )}
-            </div>
-            <h3 className="mt-2">Upload a spreadsheet</h3>
           </div>
         </div>
       </div>

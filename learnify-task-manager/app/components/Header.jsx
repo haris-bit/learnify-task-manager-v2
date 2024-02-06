@@ -1,86 +1,72 @@
-// import user icon from react icons
-import { FaUserCircle } from 'react-icons/fa'
+// import icons for home, all tasks, create task and create project
+import { FaHome } from "react-icons/fa";
+import { FaTasks } from "react-icons/fa";
+import { FaPlus } from "react-icons/fa";
+import { FaProjectDiagram } from "react-icons/fa";
+import { motion } from "framer-motion";
 
-// import logout from react icons
-import { RiLogoutBoxRLine } from 'react-icons/ri'
-
-import Link from 'next/link'
+import Link from "next/link";
 
 const Header = () => {
-    return (
-        <div
-            className='flex w-full h-16 items-center justify-around shadow-sm
+  return (
+    <div
+      className="flex w-full h-16 items-center justify-around shadow-sm
             shadow-black
-            '
+            "
+    >
+      {/* div for logo */}
+      <Link href="/" className="text-xl font-bold">
+        Lernify
+      </Link>
+      {/* div for nav */}
+      <div className="flex gap-4 ">
+        <Link
+          href="/"
+          className="mx-2 flex justify-center items-center gap-1
+        hover:text-gray-500 transition duration-300 ease-in-out
+        "
         >
-            {/* div for logo */}
-            <Link href='/'
-                className='text-xl font-bold'
-            >
-                Learnify
-            </Link>
-            {/* div for nav */}
-            <div
-                className='flex gap-4 '
-            >
-                <Link href='/'
-                    className='mx-2'
-                >
-                    Home
-                </Link>
+          <FaHome />
+          Home
+        </Link>
 
-                <Link
-                    href='/alltasks'
-                >
-                    <div
-                        className='mx-2'
-                    >
-                        All Tasks
-                    </div>
-                </Link>
+        <Link href="/alltasks">
+          <div
+            className="mx-2 mx-2 flex justify-center items-center gap-1
+                  hover:text-gray-500 transition duration-300 ease-in-out
 
-                <Link href='/createtask'
-                    className='mx-2'
-                >
-                    Create Task
-                </Link>
-                <Link
-                    href='assigntasks'
-                    className='mx-2'
-                >
-                    Assign Tasks
-                </Link>
+          "
+          >
+            <FaTasks />
+            All Tasks
+          </div>
+        </Link>
 
-                <Link
-                    href='/createtemplate'
-                    className='mx-2'
-                >
-                    Create Template
-                </Link>
-            </div>
-            {/* Div for User Profile */}
-            <div
-                className='flex gap-2 items-center'
-            >
-                <span
-                    className='flex items-center gap-2'
-                >
+        <Link
+          href="/createtask"
+          className="mx-2 mx-2 flex justify-center items-center gap-1
+                  hover:text-gray-500 transition duration-300 ease-in-out
 
-                    <FaUserCircle
-                        size={32}
-                        className='text-blue-500'
-                    />
-                    Zak
-                </span>
+          "
+        >
+          <FaPlus />
+          Create Task
+        </Link>
 
-                <RiLogoutBoxRLine
-                    size={24}
-                    className='ml-12 text-blue-500'
-                />
-            </div>
+        <Link
+          href="/createproject"
+          className="mx-2 mx-2 flex justify-center items-center gap-1
+                  hover:text-gray-500 transition duration-300 ease-in-out
 
-        </div>
-    )
-}
+          "
+        >
+          <FaProjectDiagram />
+          Create Project
+        </Link>
+      </div>
+      {/* Div for User Profile */}
+    </div>
+  );
+};
 
-export default Header
+export default Header;
